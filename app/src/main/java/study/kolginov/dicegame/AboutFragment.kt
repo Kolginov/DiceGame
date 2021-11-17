@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import study.kolginov.dicegame.databinding.FragmentAboutBinding
 
 
 class AboutFragment : Fragment() {
@@ -27,7 +26,7 @@ class AboutFragment : Fragment() {
         button.setOnClickListener {
             activity?.supportFragmentManager
                 ?.beginTransaction()
-                ?.remove(supportFragmentManager.getFragment.(R.id.frameLayout))
+                ?.remove(this)
                 ?.commit()
         }
 
