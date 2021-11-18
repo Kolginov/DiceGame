@@ -21,7 +21,6 @@ class AboutFragment : Fragment() {
 
         button=view.findViewById(R.id.button)
 
-        val aboutFragment=AboutFragment
 
         button.setOnClickListener {
             activity?.supportFragmentManager

@@ -1,17 +1,13 @@
 package study.kolginov.dicegame
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import study.kolginov.dicegame.databinding.ActivityMainBinding
-import java.time.temporal.TemporalAdjusters.next
-import java.util.*
 import kotlin.random.Random
-import kotlin.random.Random.Default.nextInt
+
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binder: ActivityMainBinding
+    private lateinit var binder: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun rollDiceComp() {
+  private  fun rollDiceComp() {
         val randomValue1 = Random.nextInt(1, 6)
         binder.imageView.setImageResource(
                 when (randomValue1) {
